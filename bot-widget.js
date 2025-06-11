@@ -390,8 +390,8 @@
             logo: '',
             name: '',
             poweredBy: {
-                text: 'Powered by n8n',
-                link: 'https://n8n.partnerlinks.io/fabimarkl'
+                text: 'Powered by HITEXIS',
+                link: 'https://www.hitexis.com'
             }
         },
         style: {
