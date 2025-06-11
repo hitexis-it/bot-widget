@@ -1,0 +1,29 @@
+<script>
+    window.ChatWidgetConfig = {
+        webhook: {
+            url: 'https://n8n.srv816851.hstgr.cloud/webhook/46e5d126-ac1d-49cf-a4e0-2c5810d56808/chat',
+            route: 'general'
+        },
+        branding: {
+            logo: 'https://www.hitexis.com/wp-content/uploads/2023/09/logo-short-e1695301216431.png',
+            name: 'HITEXIS',
+            welcomeText: 'Get instant answers to your questions!',
+            responseTimeText: 'Click the button below to start chatting'
+        },
+        style: {
+            primaryColor: '#007bff',
+            secondaryColor: '#0056b3',
+            position: 'right',
+            backgroundColor: '#ffffff',
+            fontColor: '#1f2937'
+        },
+        // 👇 Add suggested questions (Language selection)
+suggestedQuestions: [
+  '🇱🇻 Latvian',
+  '🇬🇧 English',
+  '🇷🇺 Russian'
+]
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/gh/hitexis-it/bot-widget@main/bot-widget.js"></script>
+
