@@ -1,5 +1,6 @@
 // Interactive Chat Widget for n8n
 (function() {
+    const detectedLang = document.documentElement.lang || 'en';
     // Initialize widget only once
     if (window.N8nChatWidgetLoaded) return;
     window.N8nChatWidgetLoaded = true;
@@ -437,6 +438,11 @@
     chatWindow.className = `chat-window ${settings.style.position === 'left' ? 'left-side' : 'right-side'}`;
     
     // Create chat interface with header
+    const placeholderText =
+        detectedLang === 'ru' ? 'Введите сообщение...' :
+        detectedLang === 'lv' ? 'Ievadiet ziņu...' :
+        'Type your message here...';
+
     const chatInterfaceHTML = `
         <div class="chat-header">
             <img class="chat-header-logo" src="${settings.branding.logo}" alt="${settings.branding.name}">
@@ -446,7 +452,7 @@
         <div class="chat-body">
             <div class="chat-messages"></div>
             <div class="chat-controls">
-                <textarea class="chat-textarea" placeholder="Type your message here..." rows="1"></textarea>
+                <textarea class="chat-textarea" placeholder="${placeholderText}" rows="1"></textarea>
                 <button class="chat-submit">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 2L11 13"></path>
@@ -463,8 +469,6 @@
     chatWindow.innerHTML = chatInterfaceHTML;
     
     // Create toggle button
-    const detectedLang = document.documentElement.lang || 'en';
-
     const helpText = {
         lv: 'Nepieciešama palīdzība?',
         ru: 'Нужна помощь?',
