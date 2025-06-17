@@ -11,6 +11,11 @@
     fontElement.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap';
     document.head.appendChild(fontElement);
 
+    const fontInter = document.createElement('link');
+    fontInter.rel = 'stylesheet';
+    fontInter.href = 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+    document.head.appendChild(fontInter);
+
     // Apply widget styles
     const widgetStyles = document.createElement('style');
     widgetStyles.textContent = `
@@ -316,6 +321,7 @@
         .chat-assist-widget .chat-launcher-text {
             font-weight: 600;
             font-size: 15px;
+            font-family: "Inter", sans-serif;
             white-space: nowrap;
         }
 
