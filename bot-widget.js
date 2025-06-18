@@ -1,6 +1,6 @@
 // Interactive Chat Widget for n8n
 (function() {
-    const detectedLang = document.documentElement.lang || 'en';
+    const detectedLang = (document.documentElement.lang || 'en').split('-')[0].toLowerCase();
     // Initialize widget only once
     if (window.N8nChatWidgetLoaded) return;
     window.N8nChatWidgetLoaded = true;
